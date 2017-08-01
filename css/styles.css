@@ -1,0 +1,346 @@
+body {
+    background-image: url(images/image.jpg);
+    /*background-size: 100%;*/
+}
+
+/*CSS STYLE FOR REGISTRATION AND AUTHORIZATION PARTS*/
+a {
+    color: rgb(255, 255, 153);
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgb(255, 102, 255);
+}
+
+.container1 {
+    width: 450px;
+    height: 500px;
+    background-color: rgba(51, 153, 255, 0.7);
+    margin: 60px auto 0 auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.container1 img {
+    width: 250px;
+    height: 60px;
+    margin: -34px 0 30px 0;
+    border: 4px solid rgb(255, 204, 0);
+    border-radius: 50%;
+}
+
+input[type="text"], [type="email"], input[type="password"] {
+    width: 280px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 3px solid rgb(255, 204, 0);
+    padding-left: 40px;
+}
+
+input[type="button"] {
+    padding: 3px;
+    color: red;
+    font-size: 20px;
+}
+
+.btnReg, .btnAuth {
+    width: 200px;
+    padding: 15px 50px;
+    margin: 10px 0 20px 0;
+    border: 2px solid rgb(255, 204, 0);
+    background-color: white;
+    box-shadow:5px 5px 15px #000000;
+    cursor: pointer;
+    transform:scale(1.0);
+    transition: all 0.3s;
+}
+
+.btnReg:hover, .btnAuth:hover {
+    transition: all 0.3s;
+    transform:scale(1.1);
+    background-color: rgb(0, 153, 51);
+    color: white;
+    border: 2px solid rgb(0, 153, 51);
+}
+
+.input_login::before {
+    font-family: "FontAwesome";
+    content: "\f2c0";
+    position: absolute;
+    font-size: 25px;
+    padding: 10px 0 0 10px;
+    color: red;  
+}
+
+.input_email::before {
+    font-family: "FontAwesome";
+    content: "\f003";
+    position: absolute;
+    font-size: 25px;
+    padding: 10px 0 0 10px;
+    color: red;  
+}
+
+.input_password::before {
+    font-family: "FontAwesome";
+    content: "\f11c";
+    position: absolute;
+    font-size: 25px;
+    padding: 10px 0 0 10px;
+    color: red;  
+}
+
+.container2 {
+    width: 450px;
+    height: 430px;
+    background-color: rgba(51, 153, 255, 0.7);
+    margin: 70px auto 0 auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.container2 img {
+    width: 100px;
+    height: 100px;
+    margin: -55px 0 30px 0;
+    border: 4px solid rgb(255, 204, 0);
+    border-radius: 50%;
+}
+
+/*CSS STYLE FOR TO DO LIST*/
+.container3 {
+    width: auto;
+    height: 100px;
+    font-size: 25px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+#loggedUserName {
+    font-size: 30px;
+}
+
+#button-sign-out {
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid yellow;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: yellow;
+}
+
+#button-sign-out:hover {
+    border: 1px solid black;
+    background-color: green;
+    cursor: pointer;
+    color: black;
+}
+
+.header {
+    width: auto;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgba(102, 102, 255, 0.8);
+    margin-top: 5px;
+    padding: 5px 20px;
+    color: black;
+    text-align: center;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#myInput {
+    border: none;
+    width: 75%;
+    padding: 5px;
+    float: left;
+    font-size: 20px;
+}
+
+#addBtn {
+    margin: 10px;
+    width: 10%;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    background-color: yellow;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 1px;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: rgba(0, 255, 153, 0.8);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:hover {
+    background-color: rgb(0, 255, 153);
+}
+
+ul li.checked {
+    background: rgb(255, 153, 255);
+    color: black;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: black;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.close {
+    border-radius: 10px;
+    border: 2px solid black;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    padding: 12px 16px 8px 16px;
+    background-color: rgb(0, 204, 0);
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/*TOOLTIPS*/
+.tooltip {
+    position: fixed;
+    padding: 3px 15px;
+    border: 1px solid #b3c9ce;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+    font-family: italic arial, sans-serif;
+    color: yellow;
+    background: rgba(204, 153, 255, 0.4);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip2 {
+    position: relative;
+}
+
+.tooltip2:before,
+.tooltip2:after {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 50%;
+    opacity: 0;
+    margin-bottom: 15px;
+
+    -webkit-transition: opacity .7s, margin-bottom .7s;
+    -moz-transition: opacity .7s, margin-bottom .7s;
+    transition: opacity .7s, margin-bottom .7s;
+}
+
+.tooltip2:before {
+    width: 200px;
+    height: 50px;
+    bottom: 30px;
+    margin-left: -100px;
+    padding: 5px;
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    content: attr(data-title);
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tooltip2:after {
+    content: "";
+    border-top: 10px solid rgba(0, 0, 0, 0.85);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: 20px;
+    margin-left: -10px;
+}
+
+.tooltip2:hover:before,
+.tooltip2:hover:after {
+    visibility: visible;
+    margin-bottom: 0;
+    opacity: 1;
+}
+
+/*CUSTOMIZE ALERT*/
+#dialogOverLay {
+    display: none;
+    opacity: 0.7;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: white;
+    width: 100%;
+    z-index: 5;
+}
+
+#dialogBox {
+		box-shadow: 10px 10px 15px #000000;
+    display: none;
+    position: fixed;
+    background: rgb(102, 0, 204); 
+    width: auto;
+    z-index: 5;
+}
+
+#dialogBoxHead { 
+	text-align: center; 
+	font-size:25px;
+	margin: 5px 5px 0px 5px; 
+	padding:10px 0px 10px 5px; 
+}
+
+#dialogBoxBody { 
+	border: 2px solid black;
+	background: rgb(255, 153, 102); 
+	font-size:20px; 
+	margin: 0px 5px 5px 5px; 
+	padding:10px 5px 10px 5px; 
+}
+
+#dialogBoxFoot { 
+	padding: 10px; 
+	text-align: right; 
+}

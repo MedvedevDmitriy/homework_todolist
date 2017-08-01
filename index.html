@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css"/>
+	</head>
+	<body>
+		<main>
+			<div id="registration" class="container1">
+				<img src="css/images/registration.png"/>
+					<div class="input_login">
+						<input data-tooltip="Здесь нужно ввести свой новый Логин" id="signUpLogin" type="text" name="login" placeholder="Введите логин..."/>
+					</div>
+					<div class="input_email">
+						<input data-tooltip="Здесь нужно ввести свой действующий Email" id="signUpEmail" type="email" name="email" placeholder="Введите email..."/>
+					</div>
+					<div class="input_password">
+						<input data-tooltip="Здесь нужно ввести свой будующий Пароль" id="signUpPassword" type="password" name="password" placeholder="Введите пароль..."/>
+					</div>
+					<div class="input_password">
+						<input data-tooltip="Здесь нужно ввести тот же Пароль ещё раз" id="signUpPassword2" type="password" name="password2" placeholder="Введите пароль ещё раз..."/>
+					</div>
+					<input class="btnReg" type="button" value="Зарегистрироваться" onclick="signUp(encodeURI(signUpLogin.value), encodeURI(signUpEmail.value), encodeURI(signUpPassword.value), encodeURI(signUpPassword2.value))"><br>
+					<a href="#" onclick="changePage('authorization')">Если вы уже зарегистрированны - перейдите на странницу авторизации</a>
+			</div>
+			<div id="authorization" class="container2">
+				<img src="css/images/autorization.jpg"/>
+					<div class="input_login">
+						<input data-tooltip="Здесь нужно ввести свой логин" id="singInLogin" type="text" placeholder="Введите свой логин...">
+					</div>
+					<div class="input_password">
+						<input style="margin-bottom:70px;" data-tooltip="Здесь нужно ввести свой пароль" id="signInPassword" type="password" placeholder="Введите свой пароль...">
+					</div>
+						<a href="https://www.google.com.ua" style="color:black;"><span class="tooltip2" data-title="Перейдите на сайт для восстановления пароля">Воcстановить пароль</span></a><br>
+					<input class="btnAuth" type="button" value="Авторизоваться" onclick="signIn(encodeURI(singInLogin.value), encodeURI(signInPassword.value))"><br>
+					<a href="#" onclick="changePage('registration')">Если вы ещё не зарегистрированны - перейдите на странницу регистрации</a>
+			</div>
+			<div id="toDoList">
+				<div id="dialogOverLay"></div>
+					<div id="dialogBox">
+   						<div id="dialogBoxHead"></div>
+  					  <div id="dialogBoxBody"></div>
+  					  <div id="dialogBoxFoot"></div>		
+					</div>
+				<div class="container3">
+					<div><b>Приветствую тебя:</b></div>
+					<div id="loggedUserName">data</div>
+					<input id="button-sign-out" class="header_button" type="button" value="Sign Out And Save Session" onclick="updateBase()"/>
+				</div>
+				<div class="header">
+					<h1>My ToDo List</h1>
+					<input type="text" id="myInput" placeholder="Введите текст здесь..."/>
+		  		<input type="button" id="addBtn" onclick="newElement(myInput.value,'false')" value="Add"/>
+				</div>
+				<div>
+					<ul id="myUL">
+					</ul>
+				</div>
+			</div>
+		</main>
+	<script src="scripts/alert.js" type="text/javascript"></script>
+	<script src="scripts/tooltip.js" type="text/javascript"></script>
+	<script src="scripts/main.js" type="text/javascript"></script>
+	</body>
+</html>
